@@ -1,0 +1,5 @@
+reducer : yang ngontrol state
+
+urutan : ui -> action -> reducer -> store -> ui display final
+
+menit 47:30 : bisa di mutate
