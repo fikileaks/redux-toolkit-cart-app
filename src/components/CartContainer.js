@@ -12,7 +12,6 @@ const CartContainer = () => {
   //jadi useDispatch itu -> tolong dong lakuin aksi yang udah di suruh reducer. jadi dispatch itu eksekusi akhir untuk ngerubah state
   const dispatch = useDispatch();
   const { cartItems, total, amount } = useSelector((store) => store.cart);
-  const { isOpen } = useSelector((store) => store.modal);
   // === DISPATCH => execute some action
   // === SELECTOR => ONLY displaying state, not excecuting action
 
@@ -48,7 +47,9 @@ const CartContainer = () => {
             clear cart
           </button> */}
           {/* KALO KE MODAL DULU */}
-          <button className="btn clear-btn" onClick={() => dispatch()}></button>
+          <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
+            Remove All
+          </button>
         </footer>
       </section>
     );
